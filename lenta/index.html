@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guía LENTA · El prompt que revisa tu app antes de tocarla · Lumière Autómata</title>
+<meta name="description" content="El prompt que revisa tu app antes de tocarla: mide primero y te dice cuáles de las 31 mejoras de rendimiento sí aplican.">
+<meta property="og:site_name" content="Lumière Autómata"><meta property="og:type" content="article">
+<meta property="og:title" content="Guía LENTA · El prompt que revisa tu app antes de tocarla"><meta property="og:description" content="El prompt que revisa tu app antes de tocarla: mide primero y te dice cuáles de las 31 mejoras de rendimiento sí aplican.">
+<meta property="og:image" content="https://arqjorgeml1204.github.io/lumiere-guias/lenta/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#0B1220;--card:#111A2C;--borde:#24314A;--ink:#E8ECF3;--suave:#9AA8BD;--acento:#F59E0B;--teal:#2DD4BF;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.marca{color:var(--ink);text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.marca span{color:var(--acento)}
+.pastilla{font-size:13px;font-weight:700;color:#111;background:var(--acento);border-radius:999px;padding:5px 12px;letter-spacing:.3px}
+h1{font:400 clamp(30px,8vw,46px)/1.05 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin:4px 0 14px}
+h1 em{font-style:normal;color:var(--acento)}
+.intro{color:var(--suave);margin:0 0 22px}
+h2{font-size:20px;line-height:1.3;margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--borde)}
+h3{font-size:17px;margin:22px 0 8px}
+p,li{overflow-wrap:anywhere}
+a{color:var(--teal)}
+strong{color:#fff}
+code{font:500 .9em/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;background:#0A0F1A;border:1px solid var(--borde);border-radius:6px;padding:1px 6px}
+.prompt{position:relative;margin:12px 0 16px}
+.prompt pre{margin:0;background:#0A0F1A;border:1px solid var(--borde);border-left:4px solid var(--acento);border-radius:12px;padding:44px 14px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.prompt pre code{background:none;border:0;padding:0;font-size:14.5px;line-height:1.55;color:#DCE3EE}
+.copiar{position:absolute;top:8px;right:8px;font:700 14px/1 Inter,system-ui,sans-serif;color:#111;background:var(--acento);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+.copiar.ok{background:var(--teal)}
+.tabla{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.4}
+th,td{border:1px solid var(--borde);padding:6px 7px;text-align:left;vertical-align:top;overflow-wrap:normal;hyphens:auto}
+th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--borde);margin:34px 0 14px}
+blockquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--card);border-radius:0 10px 10px 0}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--borde);color:var(--suave);font-size:15px}
+footer a{color:var(--ink)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{margin:0 0 12px}
+.lista a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.lista b{display:inline-block;color:#111;background:var(--acento);border-radius:6px;padding:1px 8px;margin-right:8px;font-size:13px}</style></head>
+<body><div class="envoltura"><header><a class="marca" href="../">Lumière <span>Autómata</span></a><span class="pastilla">Comentaste LENTA</span></header>
+<h1>Guía LENTA · El prompt que revisa tu app antes de tocarla</h1>
+<article><p>Te la mando porque comentaste <strong>LENTA</strong>. Es lo que usé con mis apps de obra. De una lista viral de 31 mejoras de rendimiento, solo 6 cambiaron algo. Y lo supe porque <strong>medí antes de cambiar</strong>.</p>
+<h2 id="lo-que-paso-en-mis-apps-medido">Lo que pasó en mis apps (medido)</h2>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Mejora</th>
+<th>Antes</th>
+<th>Después</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Reporte de obra (página web)</td>
+<td>Cargar las plantillas de Excel solo al exportar</td>
+<td>886 KB y 5,1 s</td>
+<td>553 KB y 3,6 s</td>
+</tr>
+<tr>
+<td>Reporte de obra</td>
+<td>Esperar a que termines de escribir antes de redibujar</td>
+<td>76 milésimas por tecla</td>
+<td>3,6</td>
+</tr>
+<tr>
+<td>App de estimaciones (celular)</td>
+<td>Juntar las preguntas a la base de datos</td>
+<td>82 preguntas</td>
+<td>4, con el mismo resultado</td>
+</tr>
+</tbody></table></div>
+<p>Lo medí con Chrome simulando un celular de gama media y una red lenta.</p>
+<h2 id="el-prompt-copialo-tal-cual-en-claude-con-tu-proyecto-abierto">EL PROMPT (cópialo tal cual en Claude, con tu proyecto abierto)</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Quiero que mi app sea más rápida, pero NO cambies nada todavía.
+
+1. Primero dime qué tipo de app es (página web con servidor, página sin servidor, app de celular sin internet, etc.) y cómo carga y guarda sus datos. Si no lo puedes saber leyendo el código, pregúntame.
+2. Revisa una por una estas 31 mejoras y para cada una dime: APLICA / YA ESTÁ / NO APLICA, con una línea de por qué y el archivo donde lo viste:
+   skeletons de carga · imágenes WebP/AVIF · llamadas duplicadas a la API · debounce en búsquedas · paginar resultados · CDN · cola de trabajos · consultas N+1 · compresión Brotli/Gzip · caché con Redis · dependencias sin usar · timeouts en APIs externas · respuestas de IA token a token · actualizar la interfaz sin esperar al servidor · lazy loading de imágenes · peticiones en paralelo · índices en la base de datos · rastrear peticiones lentas · servidor cerca de la base de datos · renderizar en servidor o en build · scripts de terceros al final · dividir el JavaScript por página · virtualizar listas largas · pedir solo las columnas necesarias · pool de conexiones · evitar re-renders · caché de estáticos en el navegador · repartir tráfico entre instancias · fuentes propias con pocos grosores · medir con usuarios reales · probar en celulares y redes lentas
+3. De las que APLICAN, mide ANTES (tiempo de carga, peso de la página, milisegundos por acción o número de consultas) en condiciones de celular de gama media y red lenta. Dame los números.
+4. Ordénalas por mejora esperada contra riesgo. Descarta las que mejoran menos de 20 % o que cambian cómo funciona la app.
+5. Espera mi OK. Luego aplica UNA a la vez, vuelve a medir y demuéstrame que el resultado es el mismo (mismos datos, mismos archivos exportados).
+
+Si te falta un dato para decidir, dímelo; no lo inventes.</code></pre></div>
+<h2 id="por-que-funciona">Por qué funciona</h2>
+<ul>
+<li><strong>Paso 1:</strong> la mitad de la lista es para páginas con servidor. Si tu app vive en el celular, no aplica.</li>
+<li><strong>Paso 2:</strong> muchas ya están hechas. Claude las ve en tu código y no las «arregla» otra vez.</li>
+<li><strong>Paso 3:</strong> sin un número de antes no sabes si mejoró. Una de mis 6 candidatas (WebP) solo ahorraba 15 % y la descarté.</li>
+<li><strong>Paso 5:</strong> una a la vez y comprobando que todo sale igual. Así nada se rompe.</li>
+</ul>
+<h2 id="las-31-segun-tu-tipo-de-app">Las 31, según tu tipo de app</h2>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Tipo de app</th>
+<th>Las que casi siempre aplican</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Página web con servidor propio</td>
+<td>Casi todas: CDN, compresión, caché, índices, N+1, dividir JS, SSR, timeouts…</td>
+</tr>
+<tr>
+<td>Página sin servidor (por ejemplo, un artefacto o un sitio estático)</td>
+<td>Imágenes ligeras, lazy loading, dividir lo que carga, debounce, menos re-renders, scripts al final, timeouts</td>
+</tr>
+<tr>
+<td>App de celular que trabaja sin internet</td>
+<td>N+1 e índices en su base local, miniaturas ligeras, listas virtualizadas, cola de subida con reintentos, timeouts, probar sin señal</td>
+</tr>
+</tbody></table></div>
+<p>Hecho por Lumière Autómata · @lumiereautomata</p>
+</article><footer>Hecho por <a href="https://lumiereautomata.com" target="_blank" rel="noopener">Lumière Autómata</a>. Si te sirvió, sígueme en Instagram: <a href="https://www.instagram.com/lumiereautomata/" target="_blank" rel="noopener">@lumiereautomata</a>.</footer></div><script>document.querySelectorAll('.copiar').forEach(function(b){b.addEventListener('click',function(){
+var t=b.parentNode.querySelector('code').innerText;
+function listo(){b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)}
+function respaldo(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');listo()}catch(e){}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(listo,respaldo)}else{respaldo()}})});</script></body></html>

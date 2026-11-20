@@ -1,4 +1,24 @@
 [
  {"slug": "app", "palabra": "APP", "reel": "P026", "portada": "portadas/P026_portada.png", "ogY": 150,
-  "descripcion": "Un prompt por punto para que Claude Code revise tu app antes de cobrarla: source maps, RLS, Git, APIs, hosting, rate limiting, caché, escalabilidad, monitoreo y respaldos."}
+  "descripcion": "Un prompt por punto para que Claude Code revise tu app antes de cobrarla: source maps, RLS, Git, APIs, hosting, rate limiting, caché, escalabilidad, monitoreo y respaldos."},
+ {"slug": "plan", "palabra": "PLAN", "reel": "P015, P016, P017, P018", "portada": "portadas/P015_portada.jpg",
+  "descripcion": "Los 6 prompts de Claude para tu Instagram: calendario de 30 días, ganchos, captions, carruseles, preguntas que generan comentarios y el primer mensaje a nuevos seguidores."},
+ {"slug": "lenta", "palabra": "LENTA", "reel": "P023", "portada": "portadas/P023_portada.jpg",
+  "descripcion": "El prompt que revisa tu app antes de tocarla: mide primero y te dice cuáles de las 31 mejoras de rendimiento sí aplican."},
+ {"slug": "memoria", "palabra": "MEMORIA", "reel": "P027", "portada": "portadas/P027_portada.jpg",
+  "descripcion": "La pregunta para ver lo que ChatGPT guarda de ti y los pasos para borrarlo de su memoria."},
+ {"slug": "candado", "palabra": "CANDADO", "reel": "LF04", "portada": "portadas/LF04_portada.jpg",
+  "descripcion": "5 ajustes de privacidad de WhatsApp para revisar hoy."},
+ {"slug": "sonido", "palabra": "SONIDO", "reel": "P028", "portada": "portadas/P028_portada.jpg",
+  "descripcion": "Earshot, Real SFX y Openverse: tres herramientas gratis para que tu video hecho con Claude no suene a juguete, con el prompt para Claude Code."},
+ {"slug": "texto", "palabra": "TEXTO", "reel": "P029", "portada": "portadas/P029_portada.jpg",
+  "descripcion": "3 prompts para animar texto con Claude y Remotion: palabra por palabra, tecleo con cursor y golpe invertido."},
+ {"slug": "siete", "palabra": "SIETE", "reel": "P030", "portada": "portadas/P030_portada.jpg",
+  "descripcion": "El orden para escribir un reel de 8 piezas al revés, para que el final nunca se quede vacío."},
+ {"slug": "agenda", "palabra": "AGENDA", "reel": "P031", "portada": "portadas/P031_portada.jpg",
+  "descripcion": "3 preguntas para saber si tu agente de WhatsApp agenda de verdad."},
+ {"slug": "obra", "palabra": "OBRA", "reel": "P032", "portada": "portadas/P032_portada.jpg",
+  "descripcion": "Los 4 agentes de WhatsApp para tu constructora: contesta y califica, precotiza con tu tabla, agenda la visita y da seguimiento."},
+ {"slug": "tics", "palabra": "TICS", "reel": "P033", "portada": "portadas/P033_portada.jpg",
+  "descripcion": "Los tics que delatan un texto hecho con IA en español y el prompt que los busca en tu texto."}
 ]

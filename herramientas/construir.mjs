@@ -42,8 +42,9 @@ code{font:500 .9em/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;background
 .prompt pre code{background:none;border:0;padding:0;font-size:14.5px;line-height:1.55;color:#DCE3EE}
 .copiar{position:absolute;top:8px;right:8px;font:700 14px/1 Inter,system-ui,sans-serif;color:#111;background:var(--acento);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
 .copiar.ok{background:var(--teal)}
-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px;display:block;overflow-x:auto}
-th,td{border:1px solid var(--borde);padding:8px 10px;text-align:left;vertical-align:top}
+.tabla{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.4}
+th,td{border:1px solid var(--borde);padding:6px 7px;text-align:left;vertical-align:top;overflow-wrap:normal;hyphens:auto}
 th{background:var(--card)}
 hr{border:0;border-top:1px solid var(--borde);margin:34px 0 14px}
 blockquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--card);border-radius:0 10px 10px 0}
@@ -89,7 +90,7 @@ for (const g of guias) {
   }
   const cuerpo = `<header><a class="marca" href="../">Lumière <span>Autómata</span></a><span class="pastilla">Comentaste ${esc(g.palabra)}</span></header>
 <h1>${esc(titulo)}</h1>${g.intro ? `<p class="intro">${esc(g.intro)}</p>` : ""}
-<article>${marked.parse(md)}</article>`;
+<article>${marked.parse(md).replace(/<table>/g, '<div class="tabla"><table>').replace(/<\/table>/g, "</table></div>")}</article>`;
   writeFileSync(join(dir, "index.html"), pagina({titulo, descripcion: g.descripcion, og, cuerpo}));
   lista.push(`<li><a href="./${g.slug}/"><b>${esc(g.palabra)}</b>${esc(titulo)}</a></li>`);
   console.log(`${BASE}/${g.slug}/`);
