@@ -1,0 +1,4 @@
+[
+ {"slug": "app", "palabra": "APP", "reel": "P026", "portada": "portadas/P026_portada.png", "ogY": 150,
+  "descripcion": "Un prompt por punto para que Claude Code revise tu app antes de cobrarla: source maps, RLS, Git, APIs, hosting, rate limiting, caché, escalabilidad, monitoreo y respaldos."}
+]
