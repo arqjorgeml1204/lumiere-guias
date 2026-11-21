@@ -84,5 +84,13 @@
   "reel": "P033",
   "portada": "portadas/P033_portada.jpg",
   "descripcion": "Los tics que delatan un texto hecho con IA en español y el prompt que los busca en tu texto."
+ },
+ {
+  "slug": "skills",
+  "palabra": "SKILLS",
+  "reel": "P024",
+  "portada": "portadas/P024_portada.jpg",
+  "ogY": 120,
+  "descripcion": "La skill gratis publica-con-claude: revisa en español tu guion, tu caption y tus mensajes de WhatsApp antes de publicar. Cómo instalarla en Claude Code o claude.ai y 3 prompts para probarla."
  }
 ]
