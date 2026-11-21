@@ -1,4 +1,4 @@
-# Checklist WEB · 10 cosas antes de cobrar tu página web hecha con Claude
+# Checklist WEB · 10 cosas antes de cobrar tu web hecha con Claude
 
 Abre tu proyecto en Claude Code y pega cada prompt. Claude **revisa primero y te dice qué encontró**; tú decides qué arreglar. No le pidas que cambie todo de golpe.
 
