@@ -12,7 +12,7 @@
   "palabra": "WEB",
   "reel": "P026.1",
   "portada": "portadas/P0261_portada.png",
-  "ogY": 244,
+  "ogY": 300,
   "descripcion": "Un prompt por punto para que Claude Code revise tu página web antes de cobrarla: SEO, captcha, Git, integraciones, hosting con HTTPS, rate limiting, imágenes, CDN, monitoreo y respaldos."
  },
  {
