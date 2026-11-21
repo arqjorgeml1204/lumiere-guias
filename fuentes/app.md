@@ -65,4 +65,6 @@ Dime si mi base de datos tiene respaldos automáticos, cada cuánto y por cuánt
 Un respaldo que nunca restauraste no sabes si sirve.
 
 ---
+¿Hiciste una página web y no una app? Usa la [checklist WEB](../web/).
+
 Fuentes: Vite (build options y variables de entorno), Supabase (Row Level Security y respaldos), OWASP API Security Top 10 2023 (API4, consumo de recursos sin límite). Lumière Autómata · lumiereautomata.com
