@@ -92,5 +92,13 @@
   "portada": "portadas/P024_portada.jpg",
   "ogY": 120,
   "descripcion": "La skill gratis publica-con-claude: revisa en español tu guion, tu caption y tus mensajes de WhatsApp antes de publicar. Cómo instalarla en Claude Code o claude.ai y 3 prompts para probarla."
+ },
+ {
+  "slug": "bot",
+  "palabra": "BOT",
+  "reel": "P034",
+  "portada": "portadas/P034_portada.png",
+  "ogY": 255,
+  "descripcion": "Un prompt por punto para que Claude Code revise tu bot de WhatsApp antes de cobrarlo: API oficial, plantillas, pase a un humano, horario, datos y pruebas, límite de mensajes, historial, privacidad, monitoreo y respaldos."
  }
 ]
