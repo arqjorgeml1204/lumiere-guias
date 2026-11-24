@@ -132,5 +132,13 @@
   "portada": "portadas/P038_portada.png",
   "ogY": 240,
   "descripcion": "Un prompt por punto para preparar con Claude Code la entrega de tu proyecto antes del último pago: dominio, cuentas, repositorio, accesos, manual, video, respaldo, costos, soporte y carta de entrega."
+ },
+ {
+  "slug": "play",
+  "palabra": "PLAY",
+  "reel": "P040",
+  "portada": "portadas/P040_portada.png",
+  "ogY": 255,
+  "descripcion": "Un prompt por punto para que Claude Code revise tu app antes de subirla a Google Play: cuenta del cliente, prueba cerrada, privacidad, seguridad de datos, borrar cuenta, permisos, API objetivo, ficha, llave de firma y plan de actualizaciones."
  }
 ]
