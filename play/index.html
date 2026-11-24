@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist PLAY · 10 cosas antes de subir tu app a la Play Store · Lumière Autómata</title>
+<meta name="description" content="Un prompt por punto para que Claude Code revise tu app antes de subirla a Google Play: cuenta del cliente, prueba cerrada, privacidad, seguridad de datos, borrar cuenta, permisos, API objetivo, ficha, llave de firma y plan de actualizaciones.">
+<meta property="og:site_name" content="Lumière Autómata"><meta property="og:type" content="article">
+<meta property="og:title" content="Checklist PLAY · 10 cosas antes de subir tu app a la Play Store"><meta property="og:description" content="Un prompt por punto para que Claude Code revise tu app antes de subirla a Google Play: cuenta del cliente, prueba cerrada, privacidad, seguridad de datos, borrar cuenta, permisos, API objetivo, ficha, llave de firma y plan de actualizaciones.">
+<meta property="og:image" content="https://arqjorgeml1204.github.io/lumiere-guias/play/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#0B1220;--card:#111A2C;--borde:#24314A;--ink:#E8ECF3;--suave:#9AA8BD;--acento:#F59E0B;--teal:#2DD4BF;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.marca{color:var(--ink);text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.marca span{color:var(--acento)}
+.pastilla{font-size:13px;font-weight:700;color:#111;background:var(--acento);border-radius:999px;padding:5px 12px;letter-spacing:.3px}
+h1{font:400 clamp(30px,8vw,46px)/1.05 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin:4px 0 14px}
+h1 em{font-style:normal;color:var(--acento)}
+.intro{color:var(--suave);margin:0 0 22px}
+h2{font-size:20px;line-height:1.3;margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--borde)}
+h3{font-size:17px;margin:22px 0 8px}
+p,li{overflow-wrap:anywhere}
+a{color:var(--teal)}
+strong{color:#fff}
+code{font:500 .9em/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;background:#0A0F1A;border:1px solid var(--borde);border-radius:6px;padding:1px 6px}
+.prompt{position:relative;margin:12px 0 16px}
+.prompt pre{margin:0;background:#0A0F1A;border:1px solid var(--borde);border-left:4px solid var(--acento);border-radius:12px;padding:44px 14px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.prompt pre code{background:none;border:0;padding:0;font-size:14.5px;line-height:1.55;color:#DCE3EE}
+.copiar{position:absolute;top:8px;right:8px;font:700 14px/1 Inter,system-ui,sans-serif;color:#111;background:var(--acento);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+.copiar.ok{background:var(--teal)}
+.tabla{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.4}
+th,td{border:1px solid var(--borde);padding:6px 7px;text-align:left;vertical-align:top;overflow-wrap:normal;hyphens:auto}
+th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--borde);margin:34px 0 14px}
+blockquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--card);border-radius:0 10px 10px 0}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--borde);color:var(--suave);font-size:15px}
+footer a{color:var(--ink)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{margin:0 0 12px}
+.lista a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.lista b{display:inline-block;color:#111;background:var(--acento);border-radius:6px;padding:1px 8px;margin-right:8px;font-size:13px}</style></head>
+<body><div class="envoltura"><header><a class="marca" href="../">Lumière <span>Autómata</span></a><span class="pastilla">Comentaste PLAY</span></header>
+<h1>Checklist PLAY · 10 cosas antes de subir tu app a la Play Store</h1>
+<article><p>Abre el proyecto de tu app en Claude Code y pega cada prompt. Claude <strong>revisa primero y te dice qué encontró</strong>; tú decides qué arreglar. <strong>Nunca pegues en el chat llaves de firma, contraseñas del keystore ni tokens:</strong> Claude los busca en el proyecto, no hace falta copiarlos. Los requisitos de Google Play cambian: confirma cada punto en la Play Console antes de enviar.</p>
+<p>Antes de empezar, pega esto una vez:</p>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Vas a revisar mi app Android antes de subirla a Google Play. Para cada punto que te pida:
+1) dime si ya está bien, mal o si no aplica, con el archivo y la línea donde lo viste;
+2) si está mal, explícame en una frase por qué Google la rechazaría o la frenaría;
+3) propón el arreglo más pequeño, pero NO lo apliques hasta que yo diga «sí».
+Si te falta un dato (si la cuenta es personal o de empresa, si la app pide registro, qué datos guarda), pregúntamelo.</code></pre></div>
+<h2 id="1">1 · Cuenta de desarrollador a nombre del cliente</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Pregúntame a nombre de quién está la cuenta de Google Play Console donde se va a publicar. Si es mía y la app es de un cliente, explícame los pasos para que el cliente cree su propia cuenta (personal o de organización) y me invite como usuario, o para transferir la app a su cuenta después.</code></pre></div>
+<h2 id="2">2 · Prueba cerrada con 12 testers por 14 días</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Si la cuenta de Play Console es personal y se creó después del 13 de noviembre de 2023, Google pide una prueba cerrada con al menos 12 testers durante 14 días seguidos antes de pasar a producción. Arma conmigo un plan: lista de 15 testers (para tener margen), mensaje de invitación, qué les pido probar cada día y cómo registrar sus comentarios.</code></pre></div>
+<h2 id="3">3 · Política de privacidad con su link</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Haz una lista de los datos que la app recoge o comparte (cuenta, correo, ubicación, fotos, analítica, anuncios, crash reports) leyendo el código y las librerías. Con eso escribe un borrador de política de privacidad en español, y dime dónde publicarla con un link fijo que no pida iniciar sesión. No es asesoría legal.</code></pre></div>
+<h2 id="4">4 · Formulario de seguridad de datos</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Con la lista de datos del punto anterior, prepárame las respuestas del formulario de Seguridad de los datos de Play Console: qué se recoge, qué se comparte, para qué, si va cifrado en tránsito y si el usuario puede pedir que se borre. Revisa también las librerías de terceros (Firebase, anuncios, analítica), porque cuentan como datos que la app recoge.</code></pre></div>
+<h2 id="5">5 · Borrar la cuenta desde la app</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa si la app permite crear una cuenta. Si sí, dime si existe una opción para borrarla dentro de la app y un link web para pedir el borrado sin instalarla. Si falta, propón la forma más simple de agregar las dos y qué datos se borran o se conservan.</code></pre></div>
+<h2 id="6">6 · Permisos, solo los necesarios</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Lista todos los permisos del AndroidManifest (también los que agregan las librerías) y dime para qué se usa cada uno. Márcame los que no se usan o los sensibles (ubicación en segundo plano, SMS, llamadas, todos los archivos, accesibilidad), que Google pide justificar, y propón quitarlos o cambiarlos por una alternativa.</code></pre></div>
+<h2 id="7">7 · Versión de Android al día</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime qué targetSdkVersion y compileSdkVersion tiene la app. Desde el 31 de agosto de 2026, las apps nuevas y las actualizaciones deben apuntar a Android 16 (API 36). Si está abajo, dime qué cambiar y qué comportamientos nuevos de esas versiones podrían romper algo.</code></pre></div>
+<h2 id="8">8 · Ícono y capturas del tamaño que piden</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa qué tengo para la ficha de Play Store: ícono de 512×512, gráfico de funciones de 1024×500, al menos 2 capturas de teléfono, descripción corta (80 caracteres) y larga. Dime qué falta y escribe la descripción corta y la larga en español a partir de lo que hace la app.</code></pre></div>
+<h2 id="9">9 · Llave de subida respaldada</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa cómo se firma la app (keystore, Play App Signing) y dónde está la llave de subida. Sin mostrarme contraseñas, dime si está fuera del repositorio, si hay un respaldo en un lugar seguro del cliente y qué hacer si se pierde (reinicio de la llave de subida desde Play Console).</code></pre></div>
+<h2 id="10">10 · Plan de actualizaciones (el que casi nadie hace)</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Escribe un plan de mantenimiento para la app: cada cuánto revisar dependencias, cuándo subir el targetSdk cada año antes de la fecha límite de Google, cómo probar una actualización en la prueba interna antes de producción y quién lo hace (yo o el cliente). Que quepa en una hoja.</code></pre></div>
+<p>Una app que no se actualiza deja de aparecer para usuarios con celulares nuevos.</p>
+<hr>
+<p>¿Todavía no revisas la app por dentro? Usa la <a href="../app/" target="_blank" rel="noopener">checklist APP</a>. ¿Vas a entregarla a un cliente? Usa la <a href="../entrega/" target="_blank" rel="noopener">checklist ENTREGA</a>.</p>
+<p>Fuentes: Ayuda de Play Console (requisitos de prueba para cuentas personales nuevas; Seguridad de los datos; borrado de cuentas), Android Developers (requisito de nivel de API de destino, 2026). Lumière Autómata · lumiereautomata.com</p>
+</article><footer>Hecho por <a href="https://lumiereautomata.com" target="_blank" rel="noopener">Lumière Autómata</a>. Si te sirvió, sígueme en Instagram: <a href="https://www.instagram.com/lumiereautomata/" target="_blank" rel="noopener">@lumiereautomata</a>.</footer></div><script>document.querySelectorAll('.copiar').forEach(function(b){b.addEventListener('click',function(){
+var t=b.parentNode.querySelector('code').innerText;
+function listo(){b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)}
+function respaldo(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');listo()}catch(e){}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(listo,respaldo)}else{respaldo()}})});</script></body></html>
