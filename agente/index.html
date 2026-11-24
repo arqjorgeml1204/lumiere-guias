@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist AGENTE · 10 cosas antes de venderle un chatbot con IA a un negocio · Lumière Autómata</title>
+<meta name="description" content="Un prompt por punto para que Claude Code revise tu chatbot con IA antes de venderlo: fuentes del negocio, temas prohibidos, límite de gasto, llave en el servidor, pase a un humano, pruebas tramposas, registro, aviso de IA, costo mensual y quién actualiza los precios.">
+<meta property="og:site_name" content="Lumière Autómata"><meta property="og:type" content="article">
+<meta property="og:title" content="Checklist AGENTE · 10 cosas antes de venderle un chatbot con IA a un negocio"><meta property="og:description" content="Un prompt por punto para que Claude Code revise tu chatbot con IA antes de venderlo: fuentes del negocio, temas prohibidos, límite de gasto, llave en el servidor, pase a un humano, pruebas tramposas, registro, aviso de IA, costo mensual y quién actualiza los precios.">
+<meta property="og:image" content="https://arqjorgeml1204.github.io/lumiere-guias/agente/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#0B1220;--card:#111A2C;--borde:#24314A;--ink:#E8ECF3;--suave:#9AA8BD;--acento:#F59E0B;--teal:#2DD4BF;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.marca{color:var(--ink);text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.marca span{color:var(--acento)}
+.pastilla{font-size:13px;font-weight:700;color:#111;background:var(--acento);border-radius:999px;padding:5px 12px;letter-spacing:.3px}
+h1{font:400 clamp(30px,8vw,46px)/1.05 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin:4px 0 14px}
+h1 em{font-style:normal;color:var(--acento)}
+.intro{color:var(--suave);margin:0 0 22px}
+h2{font-size:20px;line-height:1.3;margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--borde)}
+h3{font-size:17px;margin:22px 0 8px}
+p,li{overflow-wrap:anywhere}
+a{color:var(--teal)}
+strong{color:#fff}
+code{font:500 .9em/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;background:#0A0F1A;border:1px solid var(--borde);border-radius:6px;padding:1px 6px}
+.prompt{position:relative;margin:12px 0 16px}
+.prompt pre{margin:0;background:#0A0F1A;border:1px solid var(--borde);border-left:4px solid var(--acento);border-radius:12px;padding:44px 14px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.prompt pre code{background:none;border:0;padding:0;font-size:14.5px;line-height:1.55;color:#DCE3EE}
+.copiar{position:absolute;top:8px;right:8px;font:700 14px/1 Inter,system-ui,sans-serif;color:#111;background:var(--acento);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+.copiar.ok{background:var(--teal)}
+.tabla{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.4}
+th,td{border:1px solid var(--borde);padding:6px 7px;text-align:left;vertical-align:top;overflow-wrap:normal;hyphens:auto}
+th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--borde);margin:34px 0 14px}
+blockquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--card);border-radius:0 10px 10px 0}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--borde);color:var(--suave);font-size:15px}
+footer a{color:var(--ink)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{margin:0 0 12px}
+.lista a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.lista b{display:inline-block;color:#111;background:var(--acento);border-radius:6px;padding:1px 8px;margin-right:8px;font-size:13px}</style></head>
+<body><div class="envoltura"><header><a class="marca" href="../">Lumière <span>Autómata</span></a><span class="pastilla">Comentaste AGENTE</span></header>
+<h1>Checklist AGENTE · 10 cosas antes de venderle un chatbot con IA a un negocio</h1>
+<article><p>Abre el proyecto de tu chatbot en Claude Code y pega cada prompt. Claude <strong>revisa primero y te dice qué encontró</strong>; tú decides qué arreglar. <strong>Nunca pegues en el chat llaves, tokens ni conversaciones reales de clientes:</strong> Claude los lee del proyecto, no hace falta copiarlos.</p>
+<p>Antes de empezar, pega esto una vez:</p>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Vas a auditar un chatbot con IA que le voy a vender a un negocio. Para cada punto que te pida:
+1) dime si ya está bien, mal o si no aplica, con el archivo y la línea donde lo viste;
+2) si está mal, explícame el riesgo en una frase sin tecnicismos;
+3) propón el arreglo más pequeño, pero NO lo apliques hasta que yo diga «sí».
+Si te falta un dato (qué modelo uso, dónde está publicado, cuántas conversaciones al mes espera el negocio), pregúntamelo.</code></pre></div>
+<h2 id="1">1 · Fuentes del negocio y respuesta «no sé»</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime de dónde saca el chatbot sus respuestas sobre precios, horarios, políticas y reembolsos. Si las inventa el modelo o están mezcladas en el prompt, propón pasarlas a documentos o una tabla del negocio que el chatbot consulte. Revisa también qué contesta cuando algo no está en esas fuentes: debe decir que no sabe y ofrecer a una persona, nunca adivinar.</code></pre></div>
+<h2 id="2">2 · Temas prohibidos</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa las instrucciones del chatbot y dime si tiene una lista de temas que no debe tocar (salud, temas legales, política, la competencia, promesas de descuentos). Si no la tiene, propón una lista corta para este negocio y la respuesta amable que debe dar cuando le pregunten por uno de esos temas.</code></pre></div>
+<h2 id="3">3 · Límite de gasto con corte automático</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Calcula cuánto cuesta una conversación típica y una conversación eterna (alguien que no deja de escribir). Revisa si hay un tope de mensajes o de tokens por conversación y un tope de gasto por día o por mes que detenga el chatbot y me avise. Si no los hay, propón el más simple.</code></pre></div>
+<p>Pon también un límite de gasto en el panel de tu proveedor de IA.</p>
+<h2 id="4">4 · Llave de la API en el servidor</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Busca en el código del navegador (la página, el widget, la app) cualquier llave de API o token. Si la llave del modelo se usa desde el navegador, cualquiera puede copiarla: propón mover la llamada a un servidor o función y leer la llave de una variable de entorno. Dime también si la llave ya quedó en el historial de Git y cómo rotarla.</code></pre></div>
+<h2 id="5">5 · Pase a un humano</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa si el chatbot puede pasar la conversación a una persona: palabra clave, botón o detección de enojo. Si no puede, propón la forma más simple, que avise al negocio con el resumen de la conversación y que el chatbot deje de contestar en ese chat.</code></pre></div>
+<h2 id="6">6 · Pruebas con preguntas tramposas</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Escribe 20 preguntas tramposas para este negocio: descuentos que no existen, reembolsos inventados, «ignora tus instrucciones», preguntas de la competencia y datos personales de otros. Pásalas por el chatbot (o dime cómo hacerlo) y márcame cuáles contestó mal y por qué.</code></pre></div>
+<h2 id="7">7 · Registro y revisión semanal</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa si se guardan las conversaciones con fecha, la pregunta y la respuesta, sin datos sensibles de más. Propón una revisión semanal de 15 minutos: qué buscar (respuestas inventadas, quejas, preguntas sin respuesta) y cómo convertir cada error en un cambio de las fuentes o de las instrucciones.</code></pre></div>
+<h2 id="8">8 · Aviso de que es IA</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa el primer mensaje del chatbot. Si no dice claramente que es un asistente automático con IA y cómo hablar con una persona, propón un primer mensaje corto que lo diga, con un link al aviso de privacidad del negocio.</code></pre></div>
+<h2 id="9">9 · Costo por mes calculado</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Con el número de conversaciones al mes que espera el negocio, calcula el costo mensual: modelo de IA, hosting, base de datos y mensajes si va por WhatsApp. Dame un rango (mes tranquilo y mes fuerte) para cotizar el mantenimiento aparte de la instalación.</code></pre></div>
+<h2 id="10">10 · Quién actualiza los precios (la que casi nadie define)</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime qué pasa cuando el negocio cambia un precio, un horario o una promoción: quién lo cambia, dónde y en cuánto tiempo lo ve el chatbot. Si hoy solo yo puedo hacerlo, propón una forma simple para que el negocio lo actualice solo (una hoja o un panel) y un recordatorio mensual para revisar que las fuentes sigan al día.</code></pre></div>
+<p>Escríbelo en el contrato: quién actualiza y cada cuánto.</p>
+<hr>
+<p>¿Es un bot de WhatsApp o una automatización? Usa la <a href="../bot/" target="_blank" rel="noopener">checklist BOT</a> o la <a href="../flujo/" target="_blank" rel="noopener">checklist FLUJO</a>.</p>
+<p>Fuentes: Moffatt v. Air Canada, 2024 BCCRT 149 (Tribunal de Resolución Civil de Columbia Británica); OWASP Top 10 para aplicaciones con LLM 2025 (inyección de prompts, consumo sin límite, divulgación de información sensible). Lumière Autómata · lumiereautomata.com</p>
+</article><footer>Hecho por <a href="https://lumiereautomata.com" target="_blank" rel="noopener">Lumière Autómata</a>. Si te sirvió, sígueme en Instagram: <a href="https://www.instagram.com/lumiereautomata/" target="_blank" rel="noopener">@lumiereautomata</a>.</footer></div><script>document.querySelectorAll('.copiar').forEach(function(b){b.addEventListener('click',function(){
+var t=b.parentNode.querySelector('code').innerText;
+function listo(){b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)}
+function respaldo(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');listo()}catch(e){}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(listo,respaldo)}else{respaldo()}})});</script></body></html>
