@@ -116,5 +116,21 @@
   "portada": "portadas/P036_portada.png",
   "ogY": 240,
   "descripcion": "Un prompt por punto para que Claude Code revise tu chatbot con IA antes de venderlo: fuentes del negocio, temas prohibidos, límite de gasto, llave en el servidor, pase a un humano, pruebas tramposas, registro, aviso de IA, costo mensual y quién actualiza los precios."
+ },
+ {
+  "slug": "tienda",
+  "palabra": "TIENDA",
+  "reel": "P037",
+  "portada": "portadas/P037_portada.png",
+  "ogY": 255,
+  "descripcion": "Un prompt por capa para que Claude Code revise tu tienda en línea antes de cobrarla: pago verificado, inventario, confirmación, tarjetas, impuestos, envío, modo prueba, velocidad, devoluciones y respaldo de pedidos."
+ },
+ {
+  "slug": "entrega",
+  "palabra": "ENTREGA",
+  "reel": "P038",
+  "portada": "portadas/P038_portada.png",
+  "ogY": 240,
+  "descripcion": "Un prompt por punto para preparar con Claude Code la entrega de tu proyecto antes del último pago: dominio, cuentas, repositorio, accesos, manual, video, respaldo, costos, soporte y carta de entrega."
  }
 ]
