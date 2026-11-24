@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checklist FLUJO · 10 piezas antes de cobrar tu automatización · Lumière Autómata</title>
+<meta name="description" content="Un prompt por pieza para que Claude Code revise tu automatización (n8n, Make o script) antes de cobrarla: credenciales del cliente, reintentos sin duplicados, alertas, registro, datos de prueba, tope de gasto, versiones, manual, plan B y botón de apagado.">
+<meta property="og:site_name" content="Lumière Autómata"><meta property="og:type" content="article">
+<meta property="og:title" content="Checklist FLUJO · 10 piezas antes de cobrar tu automatización"><meta property="og:description" content="Un prompt por pieza para que Claude Code revise tu automatización (n8n, Make o script) antes de cobrarla: credenciales del cliente, reintentos sin duplicados, alertas, registro, datos de prueba, tope de gasto, versiones, manual, plan B y botón de apagado.">
+<meta property="og:image" content="https://arqjorgeml1204.github.io/lumiere-guias/flujo/og.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>:root{--bg:#0B1220;--card:#111A2C;--borde:#24314A;--ink:#E8ECF3;--suave:#9AA8BD;--acento:#F59E0B;--teal:#2DD4BF;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.envoltura{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.marca{color:var(--ink);text-decoration:none;font:400 20px/1 Anton,Impact,sans-serif;letter-spacing:.5px;text-transform:uppercase}
+.marca span{color:var(--acento)}
+.pastilla{font-size:13px;font-weight:700;color:#111;background:var(--acento);border-radius:999px;padding:5px 12px;letter-spacing:.3px}
+h1{font:400 clamp(30px,8vw,46px)/1.05 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.5px;margin:4px 0 14px}
+h1 em{font-style:normal;color:var(--acento)}
+.intro{color:var(--suave);margin:0 0 22px}
+h2{font-size:20px;line-height:1.3;margin:34px 0 10px;padding-top:6px;border-top:1px solid var(--borde)}
+h3{font-size:17px;margin:22px 0 8px}
+p,li{overflow-wrap:anywhere}
+a{color:var(--teal)}
+strong{color:#fff}
+code{font:500 .9em/1.4 ui-monospace,SFMono-Regular,Consolas,monospace;background:#0A0F1A;border:1px solid var(--borde);border-radius:6px;padding:1px 6px}
+.prompt{position:relative;margin:12px 0 16px}
+.prompt pre{margin:0;background:#0A0F1A;border:1px solid var(--borde);border-left:4px solid var(--acento);border-radius:12px;padding:44px 14px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+.prompt pre code{background:none;border:0;padding:0;font-size:14.5px;line-height:1.55;color:#DCE3EE}
+.copiar{position:absolute;top:8px;right:8px;font:700 14px/1 Inter,system-ui,sans-serif;color:#111;background:var(--acento);border:0;border-radius:8px;padding:9px 14px;cursor:pointer}
+.copiar.ok{background:var(--teal)}
+.tabla{overflow-x:auto;margin:12px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.4}
+th,td{border:1px solid var(--borde);padding:6px 7px;text-align:left;vertical-align:top;overflow-wrap:normal;hyphens:auto}
+th{background:var(--card)}
+hr{border:0;border-top:1px solid var(--borde);margin:34px 0 14px}
+blockquote{margin:14px 0;padding:10px 14px;border-left:4px solid var(--teal);background:var(--card);border-radius:0 10px 10px 0}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--borde);color:var(--suave);font-size:15px}
+footer a{color:var(--ink)}
+.lista{list-style:none;padding:0;margin:0}
+.lista li{margin:0 0 12px}
+.lista a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:14px 16px}
+.lista b{display:inline-block;color:#111;background:var(--acento);border-radius:6px;padding:1px 8px;margin-right:8px;font-size:13px}</style></head>
+<body><div class="envoltura"><header><a class="marca" href="../">Lumière <span>Autómata</span></a><span class="pastilla">Comentaste FLUJO</span></header>
+<h1>Checklist FLUJO · 10 piezas antes de cobrar tu automatización</h1>
+<article><p>Abre el proyecto de tu automatización en Claude Code (el script, o el JSON que exportas de n8n o de Make) y pega cada prompt. Claude <strong>revisa primero y te dice qué encontró</strong>; tú decides qué arreglar. <strong>Nunca pegues en el chat llaves, tokens ni datos reales de los clientes de tu cliente:</strong> Claude los lee del proyecto, no hace falta copiarlos.</p>
+<p>Antes de empezar, pega esto una vez:</p>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Vas a auditar una automatización que le voy a cobrar a un cliente. Puede ser un script o un flujo exportado de n8n o de Make. Para cada punto que te pida:
+1) dime si ya está bien, mal o si no aplica, con el archivo o el nodo donde lo viste;
+2) si está mal, explícame el riesgo en una frase sin tecnicismos;
+3) propón el arreglo más pequeño, pero NO lo apliques hasta que yo diga «sí».
+Si te falta un dato (dónde corre, qué servicios usa, quién paga cada uno), pregúntamelo.</code></pre></div>
+<h2 id="1">1 · Credenciales a nombre del cliente</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Haz una lista de cada servicio que usa la automatización (correo, hojas de cálculo, CRM, pagos, IA, WhatsApp) y de qué cuenta sale cada credencial. Márcame las que están a mi nombre o con mi tarjeta. Para cada una, dame los pasos para que el cliente cree su propia cuenta y la conecte, sin que yo tenga que ver su contraseña.</code></pre></div>
+<h2 id="2">2 · Reintentos sin duplicados</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa qué pasa cuando una llamada a otro servicio falla un momento (error de red, 429, 500). Dime si la automatización reintenta, cuántas veces y con qué espera. Luego revisa si un reintento puede repetir algo (cobrar dos veces, mandar dos correos, crear el pedido doble) y propón una forma de evitarlo, por ejemplo un identificador único por pedido que se revise antes de crear.</code></pre></div>
+<h2 id="3">3 · Alertas cuando truena</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime cómo me enteraría hoy si la automatización falla a las 3 de la mañana. Si la respuesta es «cuando el cliente me llame», propón un aviso automático a mi correo o a mi WhatsApp con el nombre del paso que falló, la hora y el dato que se procesaba (sin datos personales completos). En n8n puede ser un flujo de errores; en Make, una ruta de manejo de errores.</code></pre></div>
+<h2 id="4">4 · Registro de cada corrida</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa si cada corrida deja registro: cuándo empezó, qué dato entró, qué pasos corrió, en cuál falló y por qué. Dime dónde lo veo hoy y por cuánto tiempo se guarda. Si no alcanza para encontrar un error de hace una semana, propón el registro más simple (una hoja o una tabla) sin guardar datos sensibles de más.</code></pre></div>
+<h2 id="5">5 · Datos de prueba separados</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Revisa si tengo forma de probar sin tocar datos reales: correos de prueba, una hoja o base de prueba, el modo de prueba del proveedor de pagos. Busca cualquier lugar donde una prueba pueda mandar mensajes o correos a clientes reales y propón un interruptor de «modo prueba» que lo impida.</code></pre></div>
+<h2 id="6">6 · Tope de gasto con corte automático (que no te vacíen la cuenta)</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Busca ciclos, disparadores que se llaman a sí mismos y pasos que corren por cada fila o cada mensaje. Dime qué pasaría si se repite sin parar toda una noche y cuánto costaría (IA, mensajes, operaciones del plan). Propón un tope: un contador por día o por mes que detenga la automatización y me avise cuando llegue al límite.</code></pre></div>
+<p>Pon también un límite de gasto en el panel de cada servicio de pago que lo permita (IA, mensajes, nube).</p>
+<h2 id="7">7 · Versiones del flujo</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime cómo regresaría hoy a la versión que funcionaba ayer si un cambio rompe algo. Si no hay forma, propón guardar cada versión: el JSON exportado en un repositorio de Git con un mensaje por cambio, o el historial de versiones de la herramienta si mi plan lo tiene. Escribe los pasos para volver a la anterior.</code></pre></div>
+<h2 id="8">8 · Manual de una hoja</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Escribe un manual de una sola hoja para mi cliente, sin tecnicismos: qué hace la automatización, cuándo corre, qué servicios usa y quién paga cada uno, qué ve cuando todo va bien, qué hacer si algo falla y a quién llamar. Usa lo que encuentres en el proyecto; lo que no sepas, déjalo marcado para que yo lo llene.</code></pre></div>
+<h2 id="9">9 · Plan B manual</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Imagina que un servicio que usa la automatización se cae un día entero. Para cada paso importante, escribe cómo lo haría el cliente a mano mientras se arregla (por ejemplo: exportar los pedidos del día y mandarlos desde su correo). Que quepa en media hoja y que no necesite entrar a mis cuentas.</code></pre></div>
+<h2 id="10">10 · Botón de apagado (el que casi nadie pone)</h2>
+<div class="prompt"><button type="button" class="copiar">Copiar</button><pre><code>Dime cómo podría mi cliente detener la automatización de inmediato, sin llamarme y sin entrar al código. Propón la forma más simple: un interruptor en una hoja o un formulario que la automatización revise antes de cada corrida, o los pasos para desactivar el flujo en la herramienta. Incluye cómo volver a encenderla.</code></pre></div>
+<p>Pruébalo con el cliente el día de la entrega: que lo apague y lo prenda él.</p>
+<hr>
+<p>¿Hiciste una app, una página web o un bot? Usa la <a href="../app/" target="_blank" rel="noopener">checklist APP</a>, la <a href="../web/" target="_blank" rel="noopener">checklist WEB</a> o la <a href="../bot/" target="_blank" rel="noopener">checklist BOT</a>.</p>
+<p>Fuentes: documentación de n8n (manejo de errores, reintentos y ejecuciones), centro de ayuda de Make (manejo de errores e historial), OWASP API Security Top 10 2023 (API4, consumo de recursos sin límite). Lumière Autómata · lumiereautomata.com</p>
+</article><footer>Hecho por <a href="https://lumiereautomata.com" target="_blank" rel="noopener">Lumière Autómata</a>. Si te sirvió, sígueme en Instagram: <a href="https://www.instagram.com/lumiereautomata/" target="_blank" rel="noopener">@lumiereautomata</a>.</footer></div><script>document.querySelectorAll('.copiar').forEach(function(b){b.addEventListener('click',function(){
+var t=b.parentNode.querySelector('code').innerText;
+function listo(){b.textContent='¡Copiado!';b.classList.add('ok');setTimeout(function(){b.textContent='Copiar';b.classList.remove('ok')},1800)}
+function respaldo(){var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();try{document.execCommand('copy');listo()}catch(e){}document.body.removeChild(a)}
+if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(listo,respaldo)}else{respaldo()}})});</script></body></html>

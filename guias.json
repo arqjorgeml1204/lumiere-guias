@@ -100,5 +100,13 @@
   "portada": "portadas/P034_portada.png",
   "ogY": 255,
   "descripcion": "Un prompt por punto para que Claude Code revise tu bot de WhatsApp antes de cobrarlo: API oficial, plantillas, pase a un humano, horario, datos y pruebas, límite de mensajes, historial, privacidad, monitoreo y respaldos."
+ },
+ {
+  "slug": "flujo",
+  "palabra": "FLUJO",
+  "reel": "P035",
+  "portada": "portadas/P035_portada.png",
+  "ogY": 240,
+  "descripcion": "Un prompt por pieza para que Claude Code revise tu automatización (n8n, Make o script) antes de cobrarla: credenciales del cliente, reintentos sin duplicados, alertas, registro, datos de prueba, tope de gasto, versiones, manual, plan B y botón de apagado."
  }
 ]
