@@ -140,5 +140,13 @@
   "portada": "portadas/P040_portada.png",
   "ogY": 255,
   "descripcion": "Un prompt por punto para que Claude Code revise tu app antes de subirla a Google Play: cuenta del cliente, prueba cerrada, privacidad, seguridad de datos, borrar cuenta, permisos, API objetivo, ficha, llave de firma y plan de actualizaciones."
+ },
+ {
+  "slug": "demanda",
+  "palabra": "DEMANDA",
+  "reel": "P042",
+  "portada": "portadas/P042_portada.png",
+  "ogY": 322,
+  "descripcion": "Un prompt por riesgo para que Claude Code revise tu app antes de vender: edad en el registro, fuentes de Google, grabación de sesiones, correos sin baja, renovación en California y agente DMCA."
  }
 ]
